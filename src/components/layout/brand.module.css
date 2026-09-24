@@ -1,19 +1,39 @@
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  font-weight: 700;
-  font-size: var(--font-size-md);
-  color: var(--color-navy);
+  gap: 8px;
   white-space: nowrap;
 }
 
 .mark {
   display: grid;
   place-items: center;
-  width: 32px;
-  height: 32px;
+  width: 30px;
+  height: 30px;
   border-radius: var(--radius-md);
-  background: var(--color-navy);
+  background: var(--color-primary);
   color: #fff;
+}
+
+.wordmark {
+  color: var(--color-navy);
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.accent {
+  color: var(--color-primary);
+}
+
+.inverse .mark {
+  background: rgb(255 255 255 / 0.14);
+}
+
+.inverse .wordmark {
+  color: #fff;
+}
+
+.inverse .accent {
+  color: #93c5fd;
 }

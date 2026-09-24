@@ -12,15 +12,6 @@
   color: #fff;
 }
 
-.aside a,
-.aside a span:last-child {
-  color: #fff;
-}
-
-.aside a span:first-child {
-  background: rgb(255 255 255 / 0.14);
-}
-
 .asideBody {
   margin-block: auto;
   max-width: 400px;

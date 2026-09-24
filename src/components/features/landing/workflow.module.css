@@ -1,7 +1,9 @@
 .steps {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 16px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  max-width: 960px;
+  margin-inline: auto;
 }
 
 .step {
@@ -17,8 +19,8 @@
   content: "";
   position: absolute;
   top: 28px;
-  left: calc(50% + 36px);
-  width: calc(100% - 72px + 16px);
+  left: calc(50% + 40px);
+  width: calc(100% - 80px + 24px);
   height: 2px;
   background: var(--color-border-strong);
 }
@@ -28,34 +30,25 @@
   place-items: center;
   width: 56px;
   height: 56px;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
   border: 1px solid #bfdbfe;
   border-radius: 50%;
   background: var(--color-primary-soft);
   color: var(--color-primary);
 }
 
-.number {
-  color: var(--color-text-muted);
-  font-size: var(--font-size-xs);
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-}
-
 .title {
-  margin-top: 4px;
   font-weight: 600;
 }
 
-.actor {
+.description {
+  margin-top: 2px;
   color: var(--color-text-muted);
-  font-size: var(--font-size-xs);
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .steps {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     row-gap: 32px;
   }
 
@@ -64,10 +57,10 @@
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 480px) {
   .steps {
     grid-template-columns: 1fr;
-    row-gap: 0;
+    row-gap: 20px;
   }
 
   .step {
@@ -75,22 +68,13 @@
     grid-template-columns: 48px 1fr;
     column-gap: 16px;
     align-items: center;
-    padding-block: 12px;
     text-align: left;
   }
 
   .icon {
-    grid-row: span 3;
+    grid-row: span 2;
     width: 48px;
     height: 48px;
     margin-bottom: 0;
-  }
-
-  .step:not(:last-child)::after {
-    display: block;
-    top: 60px;
-    left: 23px;
-    width: 2px;
-    height: calc(100% - 48px);
   }
 }

@@ -8,7 +8,7 @@ export function PublicFooter() {
       <div className={styles.inner}>
         <Brand />
         <p className={styles.copy}>
-          © {new Date().getFullYear()} {APP_NAME}. All rights reserved.
+          © {new Date().getFullYear()} {APP_NAME}
         </p>
       </div>
     </footer>

@@ -1,4 +1,4 @@
-export const APP_NAME = "AI Job Application Assistant";
-export const APP_SHORT_NAME = "AI Job Assistant";
+export const APP_NAME = "ApplyWise";
+export const APP_TAGLINE = "AI Job Application Assistant";
 export const APP_DESCRIPTION =
-  "An intelligent, AI-powered recruitment & job application platform that streamlines applications for fresh graduates and improves recruiter matching accuracy.";
+  "Upload your resume once, see how well you match each job, and apply faster.";

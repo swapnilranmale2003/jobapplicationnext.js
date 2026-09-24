@@ -1,12 +1,12 @@
 import Link from "next/link";
-import { LinkButton } from "@/components/ui";
-import { ROUTES } from "@/constants";
+import { Button } from "@/components/ui";
+import { COMING_SOON } from "@/constants";
 import { Brand } from "./brand";
 import styles from "./public-header.module.css";
 
 const LINKS = [
   { label: "Features", href: "/#features" },
-  { label: "Panels", href: "/#panels" },
+  { label: "For recruiters", href: "/#audience" },
   { label: "How it works", href: "/#workflow" },
 ];
 
@@ -23,10 +23,12 @@ export function PublicHeader() {
           ))}
         </nav>
         <div className={styles.actions}>
-          <LinkButton href={ROUTES.LOGIN} variant="ghost" className={styles.signIn}>
+          <Button variant="ghost" className={styles.signIn} disabled title={COMING_SOON}>
             Sign in
-          </LinkButton>
-          <LinkButton href={ROUTES.REGISTER}>Get started</LinkButton>
+          </Button>
+          <Button disabled title={COMING_SOON}>
+            Get started
+          </Button>
         </div>
       </div>
     </header>

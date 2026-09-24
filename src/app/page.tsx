@@ -1,4 +1,4 @@
-import { AiFeatures, Hero, PanelOverview, ProblemSolution, Workflow } from "@/components/features/landing";
+import { AiFeatures, Audience, CtaBanner, Hero, Workflow } from "@/components/features/landing";
 import { PublicFooter, PublicHeader } from "@/components/layout";
 
 export default function HomePage() {
@@ -7,10 +7,10 @@ export default function HomePage() {
       <PublicHeader />
       <main>
         <Hero />
-        <ProblemSolution />
         <AiFeatures />
-        <PanelOverview />
+        <Audience />
         <Workflow />
+        <CtaBanner />
       </main>
       <PublicFooter />
     </>

@@ -1,0 +1,122 @@
+{
+  "botName": "ApplyWise Assistant",
+  "greeting": "Hi! I'm the ApplyWise assistant. Ask me anything about finding jobs, your resume or hiring.",
+  "fallback": "Sorry, I don't have an answer for that yet. Try one of the suggested questions below.",
+  "questions": [
+    {
+      "id": "what-is-applywise",
+      "question": "What is ApplyWise?",
+      "answer": "ApplyWise is an AI-powered job platform. You upload your resume once, see how well you match each job and apply in one click.",
+      "keywords": [
+        "applywise",
+        "platform",
+        "about applywise",
+        "what is this"
+      ]
+    },
+    {
+      "id": "upload-resume",
+      "question": "How do I upload my resume?",
+      "answer": "Go to My Resume and drop your PDF (max 5 MB). Our AI reads it and fills in your profile automatically.",
+      "keywords": [
+        "upload",
+        "cv",
+        "pdf",
+        "add resume",
+        "add my resume"
+      ]
+    },
+    {
+      "id": "match-score",
+      "question": "How is my match score calculated?",
+      "answer": "We compare the skills in your resume with the skills a job needs. More matching skills means a higher score.",
+      "keywords": [
+        "match",
+        "score",
+        "calculated",
+        "percentage",
+        "fit"
+      ]
+    },
+    {
+      "id": "ats-score",
+      "question": "What is an ATS score?",
+      "answer": "It shows how easily hiring software can read your resume. We also give tips like missing keywords and formatting fixes.",
+      "keywords": [
+        "ats",
+        "applicant tracking",
+        "resume score"
+      ]
+    },
+    {
+      "id": "improve-resume",
+      "question": "How can I improve my resume?",
+      "answer": "Open My Resume and check the ATS analysis tab. Add missing keywords, write a short summary and keep a simple layout.",
+      "keywords": [
+        "improve",
+        "better",
+        "tips",
+        "suggestions",
+        "stronger"
+      ]
+    },
+    {
+      "id": "apply-job",
+      "question": "How do I apply for a job?",
+      "answer": "Open any job from Search Jobs and click Apply. Your parsed resume is attached automatically.",
+      "keywords": [
+        "apply",
+        "submit",
+        "application"
+      ]
+    },
+    {
+      "id": "track-application",
+      "question": "How do I track my applications?",
+      "answer": "Go to My Applications to see each application's status: Applied, Under Review, Shortlisted, Hired or Rejected.",
+      "keywords": [
+        "track",
+        "status",
+        "progress",
+        "applications"
+      ]
+    },
+    {
+      "id": "post-job",
+      "question": "How do recruiters post a job?",
+      "answer": "Recruiters open Post New Job, add the role details and required skills, then publish. Applicants are ranked by AI match.",
+      "keywords": [
+        "post",
+        "recruiter",
+        "recruiters",
+        "hire",
+        "hiring",
+        "publish"
+      ]
+    },
+    {
+      "id": "is-it-free",
+      "question": "Is ApplyWise free for job seekers?",
+      "answer": "Yes. Creating an account, uploading your resume and applying for jobs is free for job seekers.",
+      "keywords": [
+        "free",
+        "cost",
+        "price",
+        "pay",
+        "pricing"
+      ]
+    },
+    {
+      "id": "data-privacy",
+      "question": "Is my data safe?",
+      "answer": "Your resume is only shared with recruiters for jobs you apply to. You can replace or delete it anytime.",
+      "keywords": [
+        "safe",
+        "privacy",
+        "data",
+        "secure",
+        "delete"
+      ]
+    }
+  ]
+}

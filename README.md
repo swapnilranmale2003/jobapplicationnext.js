@@ -1,6 +1,6 @@
-# AI Job Application Assistant
+# ApplyWise
 
-An AI-powered recruitment & job application platform for fresh graduates, recruiters and admins. Built with Next.js (App Router) and TypeScript.
+AI Job Application Assistant — an AI-powered recruitment & job application platform for fresh graduates, recruiters and admins. Built with Next.js (App Router) and TypeScript.
 
 ## Getting started
 
@@ -51,6 +51,7 @@ src/
 
 - **UI only:** every screen reads from `src/mocks/`; buttons and forms use local state. No backend, auth or persistence yet.
 - **Roles:** Job Seeker (blue), Recruiter (green) and Admin (purple) share one `AppShell`; each role's menu lives in `src/constants/navigation.ts`.
+- **AI chatbot:** floating assistant on every page (`src/components/features/chatbot`). Questions, answers and match keywords live in `src/mocks/chatbot-questions.json` — edit that file to change what it knows. No AI service is called yet.
 - **Styling:** CSS Modules + design tokens in `src/app/globals.css`. Light theme only. No UI libraries — icons are inline SVGs in `src/components/ui/icon.tsx`.
 
 ## Conventions

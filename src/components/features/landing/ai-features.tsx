@@ -5,12 +5,7 @@ import styles from "./ai-features.module.css";
 
 export function AiFeatures() {
   return (
-    <Section
-      id="features"
-      eyebrow="Artificial intelligence features"
-      title="AI that works for candidates and recruiters"
-      description="Powered by resume parsing, skill matching and ATS analysis."
-    >
+    <Section id="features" title="Everything you need to apply smarter">
       <div className={styles.grid}>
         {AI_FEATURES.map((feature) => (
           <article key={feature.title} className={styles.card}>
@@ -19,14 +14,6 @@ export function AiFeatures() {
             </span>
             <h3 className={styles.title}>{feature.title}</h3>
             <p className={styles.description}>{feature.description}</p>
-            <ul className={styles.points}>
-              {feature.points.map((point) => (
-                <li key={point}>
-                  <Icon name="check" size={14} strokeWidth={3} />
-                  {point}
-                </li>
-              ))}
-            </ul>
           </article>
         ))}
       </div>

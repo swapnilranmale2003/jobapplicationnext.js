@@ -8,7 +8,7 @@ export default function AuthLayout({ children }: { children: ReactNode }) {
   return (
     <div className={styles.page}>
       <aside className={styles.aside}>
-        <Brand />
+        <Brand tone="inverse" />
         <div className={styles.asideBody}>
           <h2 className={styles.asideTitle}>Upload once. Apply smarter.</h2>
           <p className={styles.asideText}>

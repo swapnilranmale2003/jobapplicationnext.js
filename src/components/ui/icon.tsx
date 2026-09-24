@@ -156,6 +156,7 @@ const ICON_PATHS = {
     </>
   ),
   menu: <path d="M4 6h16M4 12h16M4 18h16" />,
+  messageCircle: <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />,
   moreHorizontal: (
     <>
       <circle cx="12" cy="12" r="1" />
