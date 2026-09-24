@@ -1,0 +1,154 @@
+.layout {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+.formCard {
+  min-width: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px 20px;
+}
+
+.fullWidth {
+  grid-column: 1 / -1;
+}
+
+.skillInputRow {
+  display: flex;
+  gap: 8px;
+}
+
+.skillInputRow > :first-child {
+  flex: 1;
+}
+
+.removableTag {
+  position: relative;
+  display: inline-flex;
+}
+
+.removeButton {
+  display: grid;
+  place-items: center;
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text-muted);
+  cursor: pointer;
+}
+
+.removeButton:hover {
+  color: var(--color-danger);
+  border-color: var(--color-danger);
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid var(--color-border);
+}
+
+.tipCard {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: var(--color-recruiter-soft);
+  border-color: #bbf7d0;
+}
+
+.tipIcon {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  color: var(--color-recruiter);
+}
+
+.tipTitle {
+  font-size: var(--font-size-md);
+  font-weight: 600;
+}
+
+.tipText {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+}
+
+.tipLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 4px;
+  color: var(--color-recruiter);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+}
+
+.successCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  max-width: 480px;
+  margin-inline: auto;
+  padding-block: 40px;
+  text-align: center;
+}
+
+.successIcon {
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--color-success-soft);
+  color: var(--color-success);
+  margin-bottom: 8px;
+}
+
+.successTitle {
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+}
+
+.successText {
+  color: var(--color-text-muted);
+}
+
+.successActions {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+@media (max-width: 1024px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .actions,
+  .successActions {
+    flex-direction: column;
+  }
+}

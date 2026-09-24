@@ -1,14 +1,16 @@
-import Link from "next/link";
-import { Container } from "@/components/layout";
+import { EmptyState, LinkButton } from "@/components/ui";
 import { ROUTES } from "@/constants";
+import styles from "./status-page.module.css";
 
 export default function NotFound() {
   return (
-    <main>
-      <Container>
-        <h1>Page not found</h1>
-        <Link href={ROUTES.HOME}>Go back home</Link>
-      </Container>
+    <main className={styles.page}>
+      <EmptyState
+        icon="search"
+        title="Page not found"
+        description="The page you're looking for doesn't exist or has been moved."
+        action={<LinkButton href={ROUTES.HOME}>Go to home</LinkButton>}
+      />
     </main>
   );
 }

@@ -1,0 +1,62 @@
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 16px 0;
+}
+
+.search {
+  max-width: 320px;
+  flex: 1;
+}
+
+.filter {
+  max-width: 200px;
+}
+
+.resultCount {
+  margin-bottom: 12px;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+}
+
+.recruiterCell {
+  min-width: 0;
+}
+
+.recruiterName {
+  font-weight: 600;
+  font-size: var(--font-size-sm);
+}
+
+.recruiterEmail {
+  margin-top: 2px;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+@media (max-width: 640px) {
+  .toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search,
+  .filter {
+    max-width: none;
+  }
+
+  .actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

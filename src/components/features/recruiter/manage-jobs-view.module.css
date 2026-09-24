@@ -1,0 +1,60 @@
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.search {
+  max-width: 320px;
+  width: 100%;
+}
+
+.jobCell {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.jobTitle {
+  font-weight: 600;
+}
+
+.jobLocation {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+}
+
+.actionsCell {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.viewLink {
+  color: var(--color-recruiter);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search {
+    max-width: none;
+  }
+
+  .actionsCell {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 6px;
+  }
+}

@@ -1,0 +1,66 @@
+.wrapper {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.ring {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.ring svg {
+  transform: rotate(-90deg);
+}
+
+.track {
+  fill: none;
+  stroke: var(--color-neutral-soft);
+}
+
+.progress {
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.4s ease;
+}
+
+.value {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.sm .value {
+  font-size: 0.6875rem;
+}
+
+.md .value {
+  font-size: var(--font-size-sm);
+}
+
+.lg .value {
+  font-size: var(--font-size-2xl);
+}
+
+.high {
+  color: var(--color-success);
+}
+
+.medium {
+  color: #d97706;
+}
+
+.low {
+  color: var(--color-danger);
+}
+
+.label {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+  font-weight: 500;
+}

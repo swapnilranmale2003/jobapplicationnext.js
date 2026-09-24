@@ -1,6 +1,6 @@
-# jobapplicationnext.js
+# AI Job Application Assistant
 
-AI job application project built with Next.js (App Router) and TypeScript.
+An AI-powered recruitment & job application platform for fresh graduates, recruiters and admins. Built with Next.js (App Router) and TypeScript.
 
 ## Getting started
 
@@ -26,20 +26,32 @@ Open http://localhost:3000. A health check endpoint is available at `/api/health
 
 ```
 src/
-├── app/             # Routes, layouts, pages, and API route handlers (App Router)
-│   └── api/         # Backend endpoints (route.ts files)
+├── app/                    # Routes (App Router)
+│   ├── page.tsx            # Public landing page
+│   ├── (auth)/             # Login & registration (route group, shared split layout)
+│   ├── seeker/             # Job Seeker panel
+│   ├── recruiter/          # Recruiter (HR) panel
+│   ├── admin/              # Admin panel
+│   └── api/                # Backend endpoints (route.ts files)
 ├── components/
-│   ├── ui/          # Generic, reusable UI building blocks (Button, Input, ...)
-│   └── layout/      # Page structure components (Container, Header, ...)
-├── config/          # Typed access to environment variables and app config
-├── constants/       # App-wide constant values (routes, names, limits)
-├── hooks/           # Reusable React hooks (useXxx)
-├── lib/
-│   └── api/         # API client, error class, and response helpers
-├── services/        # Domain/data-access functions that call the API client
-├── types/           # Shared TypeScript types
-└── utils/           # Small, pure helper functions
+│   ├── ui/                 # Generic design-system components (Button, Card, DataTable, Icon, ...)
+│   ├── layout/             # App shell (sidebar + top bar), public header/footer, brand
+│   └── features/           # Domain components grouped by area (landing, auth, seeker, recruiter, admin, jobs, applications)
+├── config/                 # Typed access to environment variables
+├── constants/              # Routes, sidebar navigation per role, landing copy
+├── hooks/                  # Reusable React hooks (useXxx)
+├── lib/api/                # API client, error class, response helpers
+├── mocks/                  # Static mock data used by the UI (no backend yet)
+├── services/               # Data-access functions that call the API client
+├── types/                  # Shared TypeScript types (domain models, API shapes)
+└── utils/                  # Small, pure helper functions
 ```
+
+## UI notes
+
+- **UI only:** every screen reads from `src/mocks/`; buttons and forms use local state. No backend, auth or persistence yet.
+- **Roles:** Job Seeker (blue), Recruiter (green) and Admin (purple) share one `AppShell`; each role's menu lives in `src/constants/navigation.ts`.
+- **Styling:** CSS Modules + design tokens in `src/app/globals.css`. Light theme only. No UI libraries — icons are inline SVGs in `src/components/ui/icon.tsx`.
 
 ## Conventions
 

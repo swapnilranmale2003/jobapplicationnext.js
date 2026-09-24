@@ -1,0 +1,55 @@
+.funnel {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 120px 1fr 96px;
+  align-items: center;
+  gap: 12px;
+}
+
+.stageLabel {
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.track {
+  height: 20px;
+  border-radius: var(--radius-sm);
+  background: var(--color-neutral-soft);
+  overflow: hidden;
+}
+
+.fill {
+  height: 100%;
+  min-width: 4px;
+  border-radius: var(--radius-sm);
+  background: var(--color-admin);
+}
+
+.meta {
+  text-align: right;
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+.count {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+@media (max-width: 640px) {
+  .row {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+
+  .meta {
+    text-align: left;
+  }
+}

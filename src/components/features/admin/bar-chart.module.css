@@ -1,0 +1,105 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+}
+
+.legendSwatch {
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+}
+
+.scroll {
+  overflow-x: auto;
+}
+
+.chart {
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+  min-width: 420px;
+  height: 220px;
+  /* Room above the tallest bar for its value label. */
+  padding: 24px 4px 0;
+}
+
+.group {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  min-width: 44px;
+}
+
+.bars {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 14px;
+  width: 100%;
+  height: 160px;
+}
+
+.bar {
+  position: relative;
+  width: 16px;
+  min-height: 2px;
+  border-radius: 4px 4px 0 0;
+}
+
+.barValue {
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.625rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+}
+
+.groupLabel {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+@media (max-width: 640px) {
+  .chart {
+    min-width: 0;
+    gap: 8px;
+    padding-top: 8px;
+  }
+
+  .group {
+    min-width: 0;
+  }
+
+  .bars {
+    gap: 4px;
+  }
+
+  .bar {
+    width: 12px;
+  }
+
+  /* Too narrow for labels; exact values remain in the accessible table and bar tooltips. */
+  .barValue {
+    display: none;
+  }
+}

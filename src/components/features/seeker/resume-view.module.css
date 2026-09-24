@@ -1,0 +1,162 @@
+.panel {
+  margin-top: 20px;
+}
+
+.profileGrid,
+.atsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.spanFull {
+  grid-column: 1 / -1;
+}
+
+.detailList {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.detailList dt {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+}
+
+.detailList dd {
+  margin-top: 2px;
+  font-weight: 500;
+  overflow-wrap: anywhere;
+}
+
+.entryList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.entry {
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.entry:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.entryHeading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.entryTitle {
+  font-weight: 600;
+}
+
+.entryMeta {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+  white-space: nowrap;
+}
+
+.entrySub {
+  margin-top: 2px;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+}
+
+.entryDetail {
+  margin-top: 6px;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+}
+
+.entry .list {
+  margin-top: 8px;
+}
+
+.scoreCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+}
+
+.checks {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+}
+
+.suggestionGroups {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.suggestionGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.suggestionCategory {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+
+.suggestionList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.suggestionItem {
+  padding: 12px;
+  background: var(--color-surface-muted);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.suggestionHeading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.suggestionTitle {
+  font-weight: 600;
+  font-size: var(--font-size-sm);
+}
+
+.suggestionDetail {
+  margin-top: 4px;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+}
+
+@media (max-width: 1024px) {
+  .profileGrid,
+  .atsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .spanFull {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .detailList {
+    grid-template-columns: 1fr;
+  }
+}

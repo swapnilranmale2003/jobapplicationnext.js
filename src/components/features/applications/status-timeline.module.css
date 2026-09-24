@@ -1,0 +1,77 @@
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  counter-reset: step;
+}
+
+.step {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  text-align: center;
+}
+
+/* Connector line to the previous step */
+.step:not(:first-child)::before {
+  content: "";
+  position: absolute;
+  top: 11px;
+  right: 50%;
+  width: 100%;
+  height: 2px;
+  background: var(--color-border);
+}
+
+.done:not(:first-child)::before,
+.active:not(:first-child)::before {
+  background: var(--color-seeker);
+}
+
+.marker {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  border: 2px solid var(--color-border-strong);
+  border-radius: 50%;
+  background: var(--color-surface);
+  color: var(--color-text-muted);
+  font-size: 0.6875rem;
+  font-weight: 600;
+}
+
+.active .marker {
+  border-color: var(--color-seeker);
+  color: var(--color-seeker);
+}
+
+.done .marker {
+  border-color: var(--color-seeker);
+  background: var(--color-seeker);
+  color: #fff;
+}
+
+.failed .marker {
+  border-color: var(--color-danger);
+  background: var(--color-danger);
+  color: #fff;
+}
+
+.failed:not(:first-child)::before {
+  background: var(--color-danger);
+}
+
+.label {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+  font-weight: 500;
+}
+
+.done .label,
+.active .label {
+  color: var(--color-text);
+}

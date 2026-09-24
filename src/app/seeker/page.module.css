@@ -1,0 +1,136 @@
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+.mainCol,
+.sideCol {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 0;
+}
+
+.matchList,
+.appList {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.matchRow,
+.appRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.matchList li:last-child .matchRow,
+.appList li:last-child .appRow,
+.matchRow:last-child,
+.appRow:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.matchInfo {
+  min-width: 0;
+}
+
+.matchTitle {
+  font-weight: 600;
+  font-size: var(--font-size-sm);
+}
+
+.matchTitle:hover {
+  color: var(--color-seeker);
+}
+
+.matchCompany {
+  margin-top: 2px;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+}
+
+.resumeCard {
+  text-align: center;
+}
+
+.resumeBody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.resumeHint {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+}
+
+.notifList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.notifRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.notifIcon {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-md);
+  background: var(--color-seeker-soft);
+  color: var(--color-seeker);
+}
+
+.notifTitle {
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+}
+
+.notifDate {
+  margin-top: 2px;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+}
+
+@media (max-width: 1024px) {
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .columns {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .matchRow,
+  .appRow {
+    flex-wrap: wrap;
+  }
+}

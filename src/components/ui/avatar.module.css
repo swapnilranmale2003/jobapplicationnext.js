@@ -1,0 +1,45 @@
+.avatar {
+  display: inline-grid;
+  place-items: center;
+  flex-shrink: 0;
+  border-radius: 50%;
+  font-weight: 600;
+}
+
+.sm {
+  width: 28px;
+  height: 28px;
+  font-size: 0.6875rem;
+}
+
+.md {
+  width: 36px;
+  height: 36px;
+  font-size: var(--font-size-xs);
+}
+
+.lg {
+  width: 56px;
+  height: 56px;
+  font-size: var(--font-size-lg);
+}
+
+.blue {
+  background: var(--color-seeker-soft);
+  color: var(--color-seeker);
+}
+
+.green {
+  background: var(--color-recruiter-soft);
+  color: var(--color-recruiter);
+}
+
+.purple {
+  background: var(--color-admin-soft);
+  color: var(--color-admin);
+}
+
+.slate {
+  background: var(--color-neutral-soft);
+  color: var(--color-neutral);
+}

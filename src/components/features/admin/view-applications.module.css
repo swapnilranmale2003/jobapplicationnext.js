@@ -1,0 +1,66 @@
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 16px 0;
+}
+
+.search {
+  max-width: 320px;
+  flex: 1;
+}
+
+.filter {
+  max-width: 200px;
+}
+
+.resultCount {
+  margin-bottom: 12px;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+}
+
+.candidateCell {
+  min-width: 0;
+}
+
+.candidateName {
+  font-weight: 600;
+  font-size: var(--font-size-sm);
+}
+
+.candidateEmail {
+  margin-top: 2px;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.jobCell {
+  min-width: 0;
+}
+
+.jobTitle {
+  font-weight: 500;
+  font-size: var(--font-size-sm);
+}
+
+.company {
+  margin-top: 2px;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+}
+
+@media (max-width: 640px) {
+  .toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search,
+  .filter {
+    max-width: none;
+  }
+}

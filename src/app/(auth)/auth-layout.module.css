@@ -1,0 +1,100 @@
+.page {
+  display: grid;
+  grid-template-columns: minmax(360px, 5fr) 7fr;
+  min-height: 100vh;
+}
+
+.aside {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  background: var(--color-navy);
+  color: #fff;
+}
+
+.aside a,
+.aside a span:last-child {
+  color: #fff;
+}
+
+.aside a span:first-child {
+  background: rgb(255 255 255 / 0.14);
+}
+
+.asideBody {
+  margin-block: auto;
+  max-width: 400px;
+}
+
+.asideTitle {
+  font-size: var(--font-size-3xl);
+  letter-spacing: -0.02em;
+}
+
+.asideText {
+  margin-top: 12px;
+  color: #cadcfc;
+  font-size: var(--font-size-md);
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 32px;
+}
+
+.features li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 500;
+}
+
+.featureIcon {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-md);
+  background: rgb(255 255 255 / 0.1);
+  color: #cadcfc;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 24px;
+}
+
+.mobileBrand {
+  display: none;
+}
+
+.card {
+  width: 100%;
+  max-width: 440px;
+}
+
+@media (max-width: 900px) {
+  .page {
+    grid-template-columns: 1fr;
+  }
+
+  .aside {
+    display: none;
+  }
+
+  .main {
+    justify-content: flex-start;
+    padding: 32px 16px;
+  }
+
+  .mobileBrand {
+    display: block;
+    align-self: flex-start;
+    margin-bottom: 40px;
+  }
+}

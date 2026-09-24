@@ -1,0 +1,47 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+}
+
+.value {
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.track {
+  height: 8px;
+  background: var(--color-neutral-soft);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.fill {
+  height: 100%;
+  border-radius: inherit;
+  transition: width 0.4s ease;
+}
+
+.blue {
+  background: var(--color-seeker);
+}
+
+.green {
+  background: var(--color-recruiter);
+}
+
+.purple {
+  background: var(--color-admin);
+}
+
+.amber {
+  background: #d97706;
+}

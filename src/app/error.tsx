@@ -1,8 +1,8 @@
 "use client";
 
 import { useEffect } from "react";
-import { Container } from "@/components/layout";
-import { Button } from "@/components/ui";
+import { Button, EmptyState } from "@/components/ui";
+import styles from "./status-page.module.css";
 
 export default function ErrorPage({
   error,
@@ -16,11 +16,13 @@ export default function ErrorPage({
   }, [error]);
 
   return (
-    <main>
-      <Container>
-        <h1>Something went wrong</h1>
-        <Button onClick={() => retry()}>Try again</Button>
-      </Container>
+    <main className={styles.page}>
+      <EmptyState
+        icon="alertTriangle"
+        title="Something went wrong"
+        description="An unexpected error occurred. Please try again."
+        action={<Button onClick={() => retry()}>Try again</Button>}
+      />
     </main>
   );
 }

@@ -1,0 +1,54 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.card {
+  padding: 28px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.iconProblem,
+.iconSolution {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 16px;
+  border-radius: var(--radius-md);
+}
+
+.iconProblem {
+  background: var(--color-warning-soft);
+  color: var(--color-warning);
+}
+
+.iconSolution {
+  background: var(--color-success-soft);
+  color: var(--color-success);
+}
+
+.title {
+  font-size: var(--font-size-lg);
+}
+
+.text {
+  margin-top: 8px;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-md);
+  line-height: 1.65;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 20px;
+  }
+}

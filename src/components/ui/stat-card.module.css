@@ -1,0 +1,67 @@
+.card {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 18px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  min-width: 0;
+}
+
+.icon {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-md);
+}
+
+.blue {
+  background: var(--color-seeker-soft);
+  color: var(--color-seeker);
+}
+
+.green {
+  background: var(--color-recruiter-soft);
+  color: var(--color-recruiter);
+}
+
+.purple {
+  background: var(--color-admin-soft);
+  color: var(--color-admin);
+}
+
+.amber {
+  background: var(--color-warning-soft);
+  color: var(--color-warning);
+}
+
+.red {
+  background: var(--color-danger-soft);
+  color: var(--color-danger);
+}
+
+.body {
+  min-width: 0;
+}
+
+.label {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+}
+
+.value {
+  margin-top: 2px;
+  font-size: var(--font-size-2xl);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.meta {
+  margin-top: 2px;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+}
