@@ -1,18 +1,14 @@
-import { Audience, CtaBanner, Features, Hero, Workflow } from "@/components/features/landing";
+import { PortalSelection } from "@/components/features/landing";
 import { PublicFooter, PublicHeader } from "@/components/layout";
 
 export default function HomePage() {
   return (
-    <>
+    <div className="flex min-h-screen flex-col bg-canvas">
       <PublicHeader />
-      <main>
-        <Hero />
-        <Features />
-        <Audience />
-        <Workflow />
-        <CtaBanner />
+      <main className="flex flex-1 items-center">
+        <PortalSelection />
       </main>
       <PublicFooter />
-    </>
+    </div>
   );
 }
