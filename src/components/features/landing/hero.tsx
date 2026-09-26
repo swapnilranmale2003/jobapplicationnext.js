@@ -1,40 +1,28 @@
-import { MatchScore, Tag, TagList } from "@/components/ui";
 import { HERO } from "@/constants";
-import styles from "./hero.module.css";
-
-const SAMPLE_SKILLS = [
-  { skill: "React", matched: true },
-  { skill: "Java", matched: true },
-  { skill: "MongoDB", matched: true },
-  { skill: "Docker", matched: false },
-];
+import { CheckIcon } from "./check-icon";
+import { ProductPreview } from "./product-preview";
+import { container } from "./styles";
 
 export function Hero() {
   return (
-    <section className={styles.hero}>
-      <div className={styles.inner}>
-        <div className={styles.copy}>
-          <p className={styles.eyebrow}>{HERO.eyebrow}</p>
-          <h1 className={styles.title}>{HERO.title}</h1>
-          <p className={styles.description}>{HERO.description}</p>
-        </div>
-
-        <div className={styles.preview} aria-label="Example job match">
-          <div className={styles.previewHeader}>
-            <div>
-              <p className={styles.previewTitle}>Full Stack Developer</p>
-              <p className={styles.previewMeta}>Brightpath Labs · Bengaluru</p>
-            </div>
-            <MatchScore value={87} size="md" label="Match" />
-          </div>
-          <TagList>
-            {SAMPLE_SKILLS.map((item) => (
-              <Tag key={item.skill} variant={item.matched ? "matched" : "missing"}>
-                {item.skill}
-              </Tag>
+    <section className="border-b border-line bg-white">
+      <div className={`${container} grid items-center gap-12 py-16 md:py-20 lg:grid-cols-[1.05fr_1fr] lg:gap-16 lg:py-24`}>
+        <div>
+          <p className="text-sm font-semibold text-brand">{HERO.eyebrow}</p>
+          <h1 className="mt-3 text-4xl font-bold tracking-[-0.025em] text-navy sm:text-5xl sm:leading-[1.08]">
+            {HERO.title}
+          </h1>
+          <p className="mt-5 max-w-md text-base leading-relaxed text-body sm:text-lg">{HERO.description}</p>
+          <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-2">
+            {HERO.highlights.map((item) => (
+              <li key={item} className="flex items-center gap-2 text-sm font-medium text-ink">
+                <CheckIcon className="size-4 text-brand" />
+                {item}
+              </li>
             ))}
-          </TagList>
+          </ul>
         </div>
+        <ProductPreview />
       </div>
     </section>
   );

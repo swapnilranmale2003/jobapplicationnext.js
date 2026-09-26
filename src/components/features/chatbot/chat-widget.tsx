@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState, type FormEvent } from "react";
+import { BrandMark } from "@/components/layout/brand-mark";
 import { Icon } from "@/components/ui";
 import chatbotConfig from "@/mocks/chatbot-questions.json";
 import type { ChatbotConfig, ChatMessage } from "@/types";
@@ -75,9 +76,7 @@ export function ChatWidget() {
       {open && (
         <section className={styles.panel} aria-label={config.botName} role="dialog">
           <header className={styles.header}>
-            <span className={styles.avatar}>
-              <Icon name="sparkles" size={18} />
-            </span>
+            <BrandMark size={34} inverse />
             <div className={styles.headerText}>
               <p className={styles.title}>{config.botName}</p>
               <p className={styles.status}>
@@ -160,7 +159,7 @@ export function ChatWidget() {
         aria-expanded={open}
         aria-label={open ? "Close chat" : "Open AI assistant"}
       >
-        <Icon name={open ? "x" : "messageCircle"} size={22} />
+        <Icon name={open ? "x" : "messageCircle"} size={20} />
         {!open && <span className={styles.launcherLabel}>Ask AI</span>}
       </button>
     </div>

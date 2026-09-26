@@ -20,11 +20,11 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  height: 52px;
+  height: 48px;
   padding-inline: 18px;
   border: none;
-  border-radius: var(--radius-full);
-  background: var(--color-primary);
+  border-radius: var(--radius-md);
+  background: var(--color-navy);
   color: #fff;
   font-weight: 600;
   box-shadow: var(--shadow-lg);
@@ -33,11 +33,11 @@
 }
 
 .launcher:hover {
-  background: var(--color-primary-hover);
+  background: #13294b;
 }
 
 .launcherOpen {
-  width: 52px;
+  width: 48px;
   padding: 0;
   justify-content: center;
 }
@@ -62,16 +62,6 @@
   padding: 14px 16px;
   background: var(--color-navy);
   color: #fff;
-}
-
-.avatar {
-  display: grid;
-  place-items: center;
-  flex-shrink: 0;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background: rgb(255 255 255 / 0.14);
 }
 
 .headerText {
@@ -129,8 +119,8 @@
 .message {
   max-width: 85%;
   padding: 10px 14px;
-  border-radius: 14px;
-  line-height: 1.45;
+  border-radius: 10px;
+  line-height: 1.5;
   word-wrap: break-word;
 }
 
@@ -202,10 +192,10 @@
 
 .chip {
   padding: 6px 10px;
-  border: 1px solid #bfdbfe;
-  border-radius: var(--radius-full);
-  background: var(--color-primary-soft);
-  color: var(--color-primary);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  color: var(--color-text);
   font-size: var(--font-size-xs);
   font-weight: 500;
   text-align: left;
@@ -213,7 +203,8 @@
 }
 
 .chip:hover:not(:disabled) {
-  background: #dbeafe;
+  border-color: var(--color-primary);
+  color: var(--color-primary);
 }
 
 .chip:disabled {
@@ -279,7 +270,7 @@
   }
 
   .launcher {
-    width: 52px;
+    width: 48px;
     padding: 0;
     justify-content: center;
   }

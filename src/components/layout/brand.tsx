@@ -1,8 +1,7 @@
 import Link from "next/link";
 import { ROUTES } from "@/constants";
-import { Icon } from "@/components/ui";
 import { cn } from "@/utils";
-import styles from "./brand.module.css";
+import { BrandMark } from "./brand-mark";
 
 type BrandProps = {
   href?: string;
@@ -10,15 +9,19 @@ type BrandProps = {
   tone?: "default" | "inverse";
 };
 
-/** ApplyWise wordmark logo. */
+/** ApplyWise logo: monogram + wordmark. */
 export function Brand({ href = ROUTES.HOME, tone = "default" }: BrandProps) {
   return (
-    <Link href={href} className={cn(styles.brand, tone === "inverse" && styles.inverse)} aria-label="ApplyWise home">
-      <span className={styles.mark} aria-hidden>
-        <Icon name="sparkles" size={16} />
-      </span>
-      <span className={styles.wordmark} aria-hidden>
-        Apply<span className={styles.accent}>Wise</span>
+    <Link href={href} className="inline-flex items-center gap-2.5 whitespace-nowrap" aria-label="ApplyWise home">
+      <BrandMark inverse={tone === "inverse"} />
+      <span
+        className={cn(
+          "text-[1.1875rem] font-bold tracking-[-0.02em]",
+          tone === "inverse" ? "text-white" : "text-navy",
+        )}
+        aria-hidden
+      >
+        ApplyWise
       </span>
     </Link>
   );
